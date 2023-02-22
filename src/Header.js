@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <div className="header-container">
+    <div className="header-container side-padding">
       <header className="header">
         <a href="https://mydukaan.io/">
           <img src="assets/logo/dukaan-white.svg" alt="Dukaan logo"></img>

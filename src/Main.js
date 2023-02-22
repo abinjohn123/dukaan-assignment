@@ -42,7 +42,7 @@ function PageNumber({ number, isActive }) {
 
 export default function Main() {
   return (
-    <div className="main-background">
+    <div className="main-background side-padding">
       <main className="main">
         <header className="slogan-header">
           <h1>Free slogan maker</h1>
