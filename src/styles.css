@@ -2,6 +2,8 @@
   --primary: #146eb4;
   --background: #fafafa;
   --white: #ffffff;
+  --text-dark: #1a181e;
+  --text-grey: #4d4d4d;
 }
 
 * {
@@ -20,6 +22,8 @@ a:active {
   max-width: 1440px;
   background-color: var(--background);
   margin: 0 auto;
+
+  font-family: sans-serif;
 }
 
 .header-container {
@@ -62,4 +66,103 @@ a:active {
   align-items: center;
   justify-content: center;
   font-family: "Galano Grotesque";
+}
+
+/* Main section */
+.main-background {
+  height: 1316px;
+}
+.main {
+  background-color: var(--white);
+  /* background-color: slategrey; */
+  width: 1120px;
+  margin: 0 auto;
+  padding: 64px 192px;
+  border-radius: 8px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 48px;
+  column-gap: 32px;
+}
+
+.horizontal-rule {
+  grid-column: 1/-1;
+  border: 1px solid #d9d9d9;
+  border-color: #d9d9d9;
+}
+
+.slogan-header {
+  grid-column: 1/-1;
+  /* background-color: skyblue; */
+}
+
+.slogan-header > h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+  color: var(--text-dark);
+  letter-spacing: -0.04em;
+  margin-bottom: 16px;
+}
+
+.slogan-header > p {
+  color: var(--text-grey);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.slogan-search {
+  /* background-color: palegoldenrod; */
+}
+
+.slogan-search-caption {
+  margin-bottom: 8px;
+}
+.slogan-search-component {
+  margin-bottom: 48px;
+  width: 352px;
+  height: 48px;
+  /* background-color: slateblue; */
+
+  display: flex;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+}
+
+.slogan-search-component > input {
+  padding: 12px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.slogan-search-component > button {
+  margin-left: auto;
+  background: none;
+  outline: none;
+  border: none;
+  padding-right: 16px;
+}
+.slogan-search-component svg {
+  height: 18px;
+  width: 18px;
+  fill: var(--text-grey);
+  stroke: var(--text-grey);
+  cursor: pointer;
+}
+
+.slogan-search-btn {
+  width: 204px;
+  height: 50px;
+  background-color: var(--primary);
+  font-size: 18px;
+
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  color: var(--white);
+  cursor: pointer;
 }
