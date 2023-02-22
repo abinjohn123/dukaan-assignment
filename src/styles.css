@@ -300,8 +300,39 @@ a:active {
   font-size: 20px;
   color: var(--text-dark);
 }
-.feature-card-text {
+.feature-card-text,
+.product-text {
   font-size: 16px;
   line-height: 24px;
   color: var(--text-grey);
+}
+
+/* Other products */
+.other-products {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: var(--white);
+}
+
+.other-products-header {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -0.04em;
+  margin-bottom: 48px;
+}
+
+.products-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 32px;
+  row-gap: 32px;
+}
+.product-img {
+  margin-bottom: 16px;
+}
+.product-title {
+  margin-bottom: 4px;
+  font-size: 20px;
+  color: var(--text-dark);
 }
