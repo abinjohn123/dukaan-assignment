@@ -1,3 +1,37 @@
+function Result({ textContent }) {
+  return <p className="slogan-result">{textContent}</p>;
+}
+
+function SearchResults() {
+  const results = [
+    "There is no Sore it will Not Heal, No cool it will not Subdue.",
+    "coziness building for tomorrow",
+    "There is no Sore it will Not Heal, No cool it will not Subdue.",
+    "Review the facts cool is the best.",
+    "Review the facts cool is the best.",
+    "coziness building for tomorrow",
+    "There is no Sore it will Not Heal, No cool it will not Subdue.",
+    "coziness building for tomorrow",
+    "There is no Sore it will Not Heal, No cool it will not Subdue.",
+    "Review the facts cool is the best.",
+    "There is no Sore it will Not Heal, No cool it will not Subdue.",
+    "Review the facts cool is the best.",
+    "There is no Sore it will Not Heal, No cool it will not Subdue.",
+    "Review the facts cool is the best.",
+    "There is no Sore it will Not Heal, No cool it will not Subdue.",
+    "Review the facts cool is the best.",
+    "There is no Sore it will Not Heal, No cool it will not Subdue.",
+    "Review the facts cool is the best."
+  ];
+  return (
+    <div className="slogan-search-results">
+      {results.map((result, index) => (
+        <Result key={index} textContent={result} />
+      ))}
+    </div>
+  );
+}
+
 export default function Main() {
   return (
     <div className="main-background">
@@ -36,7 +70,14 @@ export default function Main() {
           </div>
           <button className="slogan-search-btn">Generate slogans</button>
         </div>
-        <hr className="horizontal-rule" />
+        <div className="slogan-results">
+          <header className="slogan-results-header">
+            <p>We have generated 1,023 slogans for “cozy”</p>
+            <button>Download all</button>
+          </header>
+          <SearchResults />
+        </div>
+        <div className="slogan-pagination"></div>
       </main>
     </div>
   );
