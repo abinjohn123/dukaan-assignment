@@ -1,4 +1,65 @@
-.App {
-  font-family: sans-serif;
-  text-align: center;
+:root {
+  --primary: #146eb4;
+  --background: #fafafa;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.app {
+  max-width: 1440px;
+  background-color: var(--background);
+  margin: 0 auto;
+}
+
+.header-container {
+  background-color: var(--primary);
+  height: 328px;
+  padding: 20px 160px;
+}
+
+.header {
+  font-size: 18px;
+  line-height: 26px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-right {
+  width: 269px;
+  height: 50px;
+
+  display: flex;
+  justify-content: space-between;
+}
+.header-link-blank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--white);
+}
+.header-link-white {
+  display: flex;
+  width: 177px;
+  height: 50px;
+  border-radius: 4px;
+  background-color: var(--white);
+  color: var(--primary);
+
+  align-items: center;
+  justify-content: center;
+  font-family: "Galano Grotesque";
 }
