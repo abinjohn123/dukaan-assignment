@@ -36,7 +36,7 @@ export default function Features() {
   return (
     <div className="features side-padding">
       {featureCards.map((feature, i) => (
-        <Card feature={feature} jey={i} />
+        <Card feature={feature} key={i} />
       ))}
     </div>
   );
