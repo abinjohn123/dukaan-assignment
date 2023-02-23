@@ -1,4 +1,4 @@
-const featureCards = [
+const featureCardsContent = [
   {
     url: "assets/icons/web/1.svg",
     title: "Search",
@@ -18,6 +18,10 @@ const featureCards = [
   }
 ];
 
+/*
+  Returns a feature card that has an image, title, and description.
+*/
+
 function Card({ feature }) {
   return (
     <div className="feature-card">
@@ -32,10 +36,14 @@ function Card({ feature }) {
   );
 }
 
+/*
+  Maps over the featureCardsContent array
+  and generates feature cards for each entry.
+*/
 export default function Features() {
   return (
     <section className="features side-padding">
-      {featureCards.map((feature, i) => (
+      {featureCardsContent.map((feature, i) => (
         <Card feature={feature} key={i} />
       ))}
     </section>
