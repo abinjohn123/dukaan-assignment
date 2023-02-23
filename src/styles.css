@@ -49,19 +49,17 @@ a:active {
   margin: 0 auto;
 }
 
-.header-container {
+.header {
   background-color: var(--primary);
   height: 328px;
   padding-top: 20px;
-}
 
-.header {
   font-size: 18px;
   line-height: 26px;
 
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .header-right {
