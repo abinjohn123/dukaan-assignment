@@ -29,7 +29,7 @@ function ProductCard({ product }) {
   return (
     <div className="other-products--product">
       <img className="product-img" src={product.url} alt={product.title}></img>
-      <h3 className="product-title">{product.title}</h3>
+      <h5 className="product-title">{product.title}</h5>
       <p className="product-text">{product.text}</p>
     </div>
   );

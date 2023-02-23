@@ -1,5 +1,40 @@
-function Result({ textContent }) {
-  return <p className="slogan-result">{textContent}</p>;
+import { useState } from "react";
+
+function Result({ textContent, index }) {
+  console.log(index);
+  const [display, setDisplay] = useState("none");
+  const [hoverContent, setHoverContent] = useState("Click to copy");
+
+  function handleMouseIn() {
+    setDisplay("block");
+  }
+  function handleMouseLeave() {
+    setDisplay("none");
+    setHoverContent("Click to copy");
+  }
+  function handleMouseClick() {
+    setHoverContent("Copied!");
+  }
+
+  const hoverSyle = {
+    display,
+    [`${index % 2 === 0 ? "left" : "right"}`]: "-16px",
+    transform: `translateX(${index % 2 === 0 ? "-" : ""}100%)`
+  };
+
+  return (
+    <p
+      className="slogan-result"
+      onMouseEnter={handleMouseIn}
+      onMouseLeave={handleMouseLeave}
+      onClick={handleMouseClick}
+    >
+      {textContent}
+      <span className={`--hover`} style={hoverSyle}>
+        {hoverContent}
+      </span>
+    </p>
+  );
 }
 
 function SearchResults() {
@@ -26,7 +61,7 @@ function SearchResults() {
   return (
     <div className="slogan-search-results">
       {results.map((result, index) => (
-        <Result key={index} textContent={result} />
+        <Result key={index} textContent={result} index={index} />
       ))}
     </div>
   );
@@ -55,7 +90,7 @@ export default function Main() {
           <p className="slogan-search-caption">Word for your slogan</p>
           <div className="slogan-search-component">
             <input type="text" placeholder="cozy" />
-            <button>
+            <button className="btn-clear-search">
               <svg
                 width="18"
                 height="18"
