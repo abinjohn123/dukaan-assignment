@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 function Result({ textContent, index }) {
-  console.log(index);
   const [display, setDisplay] = useState("none");
   const [hoverContent, setHoverContent] = useState("Click to copy");
 
@@ -86,10 +85,12 @@ export default function Main() {
             1,000 relevant slogans for free.
           </p>
         </header>
-        <div className="slogan-search">
-          <p className="slogan-search-caption">Word for your slogan</p>
+        <form className="slogan-search">
+          <label htmlFor="slogan-input" className="slogan-search-caption">
+            Word for your slogan
+          </label>
           <div className="slogan-search-component">
-            <input type="text" placeholder="cozy" />
+            <input id="slogan-input" type="text" placeholder="cozy" />
             <button className="btn-clear-search">
               <svg
                 width="18"
@@ -111,8 +112,10 @@ export default function Main() {
               </svg>
             </button>
           </div>
-          <button className="slogan-search-btn">Generate slogans</button>
-        </div>
+          <button type="submit" className="slogan-search-btn">
+            Generate slogans
+          </button>
+        </form>
         <div className="slogan-results">
           <header className="slogan-results-header">
             <h5>We have generated 1,023 slogans for “cozy”</h5>

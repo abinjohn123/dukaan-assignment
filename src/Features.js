@@ -34,10 +34,10 @@ function Card({ feature }) {
 
 export default function Features() {
   return (
-    <div className="features side-padding">
+    <section className="features side-padding">
       {featureCards.map((feature, i) => (
         <Card feature={feature} key={i} />
       ))}
-    </div>
+    </section>
   );
 }
