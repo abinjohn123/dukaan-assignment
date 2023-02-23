@@ -93,7 +93,7 @@ a:active {
   row-gap: 48px;
   column-gap: 32px;
 
-  transform: translate(0, -200px);
+  transform: translate(0, -194px);
 }
 
 .horizontal-rule {
@@ -123,10 +123,6 @@ a:active {
   line-height: 28px;
 }
 
-.slogan-search {
-  /* background-color: palegoldenrod; */
-}
-
 .slogan-search-caption {
   margin-bottom: 8px;
 }
@@ -134,7 +130,6 @@ a:active {
   margin-bottom: 48px;
   width: 352px;
   height: 48px;
-  /* background-color: slateblue; */
 
   display: flex;
   border: 1px solid #d9d9d9;
@@ -207,6 +202,7 @@ a:active {
 .slogan-search-results {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(9, 60px);
   column-gap: 32px;
   row-gap: 20px;
 }
@@ -216,6 +212,10 @@ a:active {
   border-radius: 4px;
   display: flex;
   align-items: center;
+
+  font-size: 16px;
+  line-height: 22px;
+  cursor: pointer;
 }
 
 .slogan-pagination {
@@ -342,7 +342,6 @@ a:active {
   background-color: var(--text-dark);
   color: var(--white);
   padding-top: 64px;
-  padding-bottom: 24px;
 
   display: grid;
   grid-template-columns: 1fr auto;
