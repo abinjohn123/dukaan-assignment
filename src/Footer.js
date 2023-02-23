@@ -1,3 +1,8 @@
+/*
+  Returns an anchor tag for a footer item.
+  An optional span tag to highlight a number
+  to the right of the text content is also present.
+*/
 function Link({ url, text, highlight }) {
   return (
     <a className="footer-link" href={url}>
