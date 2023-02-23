@@ -25,6 +25,9 @@ const otherProducts = [
   }
 ];
 
+/*
+  Create a product card that has an image, title, and description
+*/
 function ProductCard({ product }) {
   return (
     <div className="other-products--product">
@@ -35,6 +38,11 @@ function ProductCard({ product }) {
   );
 }
 
+/*
+  A section that displays other free products from Dukaan.
+  Maps over the otherProducts array and generates
+  a product card for each array item.
+*/
 export default function Others() {
   return (
     <section className="side-padding other-products">
