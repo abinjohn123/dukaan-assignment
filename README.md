@@ -1,6 +1,6 @@
 # Dukaan Frontend Assignment
 
-A static page created in React for Dukaan's slogan maker.
+A static page created in React for Dukaan's slogan maker. [Live link](https://abinjohn-dukaan.netlify.app/)
 
 ## Resources
 
