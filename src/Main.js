@@ -1,5 +1,15 @@
 import { useState } from "react";
 
+/*
+  The Result component returns a paragraph element
+  that contains a search result for a slogan.
+
+  A hover element that nudges the user to click on the element
+  to copy the content to the clipboard is also present.
+  Whether the hover element is displayed on the left or right
+  of the paragraph element is dependent on the paragraph element's
+  placement in the grid.
+*/
 function Result({ textContent, index }) {
   const [display, setDisplay] = useState("none");
   const [hoverContent, setHoverContent] = useState("Click to copy");
@@ -36,6 +46,10 @@ function Result({ textContent, index }) {
   );
 }
 
+/*
+  Maps over the results array and returns the Result Component
+  for each entry.
+*/
 function SearchResults() {
   const results = [
     "There is no Sore it will Not Heal, No cool it will not Subdue.",
@@ -66,6 +80,10 @@ function SearchResults() {
   );
 }
 
+/*
+  Returns a button element.
+  Used to generate page numbers in the pagination section.
+*/
 function PageNumber({ number, isActive }) {
   return (
     <button className={`page-number ${isActive ? "--active" : ""}`}>
@@ -91,7 +109,7 @@ export default function Main() {
           </label>
           <div className="slogan-search-component">
             <input id="slogan-input" type="text" placeholder="cozy" />
-            <button className="btn-clear-search">
+            <button type="button" className="btn-clear-search">
               <svg
                 width="18"
                 height="18"
