@@ -9,17 +9,17 @@
 
 @font-face {
   font-family: galanogrotesque;
-  src: url("./fonts/galanogrotesque-regular.otf");
+  src: url(assets/fonts/galanogrotesque-regular.otf);
   font-weight: 400;
 }
 @font-face {
   font-family: galanogrotesque;
-  src: url("./fonts/galanogrotesque-medium.otf");
+  src: url(assets/fonts/galanogrotesque-medium.otf);
   font-weight: 500;
 }
 @font-face {
   font-family: galanogrotesque;
-  src: url("./fonts/galanogrotesque-semibold.otf");
+  src: url(assets/fonts/galanogrotesque-semibold.otf);
   font-weight: 600;
 }
 
