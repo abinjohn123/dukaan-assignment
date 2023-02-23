@@ -7,6 +7,22 @@
   --text-grey: #4d4d4d;
 }
 
+@font-face {
+  font-family: galanogrotesque;
+  src: url(assets/fonts/galanogrotesque-regular.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: galanogrotesque;
+  src: url(assets/fonts/galanogrotesque-medium.otf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: galanogrotesque;
+  src: url(assets/fonts/galanogrotesque-semibold.otf);
+  font-weight: 600;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +40,7 @@ a:active {
   background-color: var(--background);
   margin: 0 auto;
 
-  font-family: sans-serif;
+  font-family: galanogrotesque, sans-serif;
 }
 
 .side-padding {
@@ -55,24 +71,25 @@ a:active {
   display: flex;
   justify-content: space-between;
 }
+.heaer-right a {
+  font-size: 18px;
+}
 .header-link-blank {
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-
-  color: var(--white);
 }
 .header-link-white {
-  display: flex;
   width: 177px;
   height: 50px;
   border-radius: 4px;
   background-color: var(--white);
   color: var(--primary);
 
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Galano Grotesque";
 }
 
 /* Main section */
@@ -107,7 +124,6 @@ a:active {
 }
 
 .slogan-header > h1 {
-  font-style: normal;
   font-weight: 600;
   font-size: 36px;
   line-height: 42px;
@@ -125,6 +141,10 @@ a:active {
 
 .slogan-search-caption {
   margin-bottom: 8px;
+  color: var(--text-grey);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
 }
 .slogan-search-component {
   margin-bottom: 48px;
@@ -141,6 +161,7 @@ a:active {
   width: 100%;
   border: none;
   outline: none;
+  font-family: galanogrotesque;
   font-size: 16px;
 }
 .slogan-search-component > button {
@@ -159,10 +180,12 @@ a:active {
 }
 
 .slogan-search-btn {
+  font-family: galanogrotesque;
   width: 204px;
   height: 50px;
   background-color: var(--primary);
   font-size: 18px;
+  line-height: 26px;
 
   outline: none;
   border: none;
@@ -183,7 +206,7 @@ a:active {
   margin-bottom: 32px;
 }
 
-.slogan-results-header p {
+.slogan-results-header h5 {
   color: var(--text-dark);
   font-size: 20px;
   line-height: 28px;
@@ -208,6 +231,7 @@ a:active {
 }
 .slogan-result {
   background-color: var(--grey);
+  color: var(--text-dark);
   padding: 8px 16px;
   border-radius: 4px;
   display: flex;

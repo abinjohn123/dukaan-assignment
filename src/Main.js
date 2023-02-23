@@ -80,7 +80,7 @@ export default function Main() {
         </div>
         <div className="slogan-results">
           <header className="slogan-results-header">
-            <p>We have generated 1,023 slogans for “cozy”</p>
+            <h5>We have generated 1,023 slogans for “cozy”</h5>
             <button>Download all</button>
           </header>
           <SearchResults />
