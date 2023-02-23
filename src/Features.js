@@ -18,12 +18,16 @@ const featureCards = [
   }
 ];
 
-function Card({ url, title, text }) {
+function Card({ feature }) {
   return (
     <div className="feature-card">
-      <img className="feature-card-image" src={url} alt={title}></img>
-      <h3 className="feature-card-title">{title}</h3>
-      <p className="feature-card-text">{text}</p>
+      <img
+        className="feature-card-image"
+        src={feature.url}
+        alt={feature.title}
+      ></img>
+      <h3 className="feature-card-title">{feature.title}</h3>
+      <p className="feature-card-text">{feature.text}</p>
     </div>
   );
 }
@@ -32,7 +36,7 @@ export default function Features() {
   return (
     <div className="features side-padding">
       {featureCards.map((feature, i) => (
-        <Card url={feature.url} title={feature.title} text={feature.text} />
+        <Card feature={feature} jey={i} />
       ))}
     </div>
   );
